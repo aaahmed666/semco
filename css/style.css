@@ -403,7 +403,7 @@ html[dir="rtl"] .logo .social i {
   margin: 0;
 }
 
-.logo .hero {
+.hero {
   position: relative;
 }
 
@@ -434,8 +434,8 @@ html[dir="rtl"] .logo .social i {
   flex-direction: column;
   padding: 15px;
   width: 135px;
-  bottom: -120px;
-  right: 215px;
+  top: 35px;
+  left: -45px;
   position: absolute;
   content: "";
   background-color: #fff;
@@ -447,9 +447,9 @@ html[dir="rtl"] .logo .social i {
   opacity: 0;
 }
 
-.down.resize {
-  right: 205px;
-}
+/* .down.resize {
+  left: 205px;
+} */
 
 .down::before,
 .drop::before {

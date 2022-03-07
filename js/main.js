@@ -1,7 +1,6 @@
 let icon = document.querySelector(".up");
 let social = document.querySelector("nav .social");
 let header = document.getElementById("side-header");
-let down = document.querySelector("nav .down");
 let menu = document.querySelector(".logo .menu i.fa-bars");
 let close = document.querySelector(".closeside i");
 let popup = document.querySelector(".popup");
@@ -19,14 +18,12 @@ window.onscroll = function () {
     if (window.innerWidth > 1200) {
       social.classList.add("hide");
       header.classList.add("hide");
-      down.classList.add("resize");
     }
   } else {
     icon.classList.remove("show");
     if (window.innerWidth > 1200) {
       social.classList.remove("hide");
       header.classList.remove("hide");
-      down.classList.remove("resize");
     }
   }
 };

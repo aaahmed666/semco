@@ -1387,13 +1387,13 @@ html[dir="ltr"] .footer .last img {
     align-items: flex-start;
     padding: 0 15px;
     margin: 10px 0;
-    animation: slidedwon 0.3s forwards ease-in-out;
     transition: all 0.4s ease-in-out;
+    animation: slideup 0.3s forwards ease-in-out;
   }
 
   #side-header .down.open {
     display: flex;
-    animation: slideup 0.3s forwards ease-in-out;
+    animation: slidedwon 0.3s forwards ease-in-out;
   }
 
   #side-header .down a {

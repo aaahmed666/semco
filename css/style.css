@@ -447,10 +447,6 @@ html[dir="rtl"] .logo .social i {
   opacity: 0;
 }
 
-/* .down.resize {
-  left: 205px;
-} */
-
 .down::before,
 .drop::before {
   position: absolute;

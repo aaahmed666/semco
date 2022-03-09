@@ -908,6 +908,9 @@ html[dir="ltr"] .category .end i {
   padding: 15px 30px;
   background-color: var(--main-color);
   margin-bottom: 2px;
+  cursor: pointer;
+  animation: slidedwon 0.3s forwards ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .category .description h4 {
@@ -920,6 +923,17 @@ html[dir="ltr"] .category .end i {
 .category .description i {
   font-size: 10px;
   color: #fff;
+  animation: back 0.3s forwards ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.category .description i.show {
+  animation: move 0.3s forwards ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.category .noslide.show {
+  display: none;
 }
 
 .category .noslide {
@@ -979,6 +993,7 @@ html[dir="ltr"] .category .end i {
   border: 1px solid #e5e5e5;
 }
 
+.category .section1,
 .category .section {
   display: flex;
   justify-content: space-between;
@@ -988,8 +1003,11 @@ html[dir="ltr"] .category .end i {
   padding: 15px 30px;
   background-color: var(--main-color);
   margin-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
+.category .section1 h4,
 .category .section h4 {
   font-size: 14px;
   color: #fff;
@@ -997,17 +1015,35 @@ html[dir="ltr"] .category .end i {
   margin: 0;
 }
 
+.category .section1 i,
 .category .section i {
   font-size: 10px;
   color: #fff;
 }
 
+.category .radio-item0,
 .category .radio-item {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.category .section i.show,
+.category .section1 i.show {
+  animation: move 0.3s forwards ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.category .section i,
+.category .section1 i {
+  animation: back 0.3s forwards ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .category label {
@@ -1029,28 +1065,25 @@ html[dir="ltr"] .category .end i {
   border: 1px solid #f2f2f2;
 }
 
-.category .radio-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
+.category .radio-item0 input[type="radio"],
 .category .radio-item input[type="radio"],
+.category .radio-item0 input[type="checkbox"],
 .category .radio-item input[type="checkbox"] {
   display: none;
 }
 
+.category .radio-item0 label,
 .category .radio-item label {
   font-size: 15px;
   color: var(--main-color);
 }
 
+.category .radio-item0 label::after,
 .category .radio-item label::after {
   display: none;
 }
 
+.category .radio-item0 span,
 .category .radio-item span {
   display: inline-flex;
   justify-content: center;
@@ -1062,6 +1095,7 @@ html[dir="ltr"] .category .end i {
   border: 1px solid #e5e5e5;
 }
 
+.category .radio-item0 span::after,
 .category .radio-item span::after {
   content: "";
   width: 7px;
@@ -1072,8 +1106,97 @@ html[dir="ltr"] .category .end i {
   opacity: 0;
 }
 
+.category .radio-item0 input:checked + span::after,
 .category .radio-item input:checked + span::after {
   opacity: 1;
+}
+
+.category .description.show,
+.category .radio-item.show,
+.category .radio-item0.show {
+  transform: scaleY(1);
+}
+
+@keyframes slidedwon {
+  0% {
+    width: 0%;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+    width: 75%;
+    height: 75%;
+  }
+  50% {
+    opacity: 0.5;
+    width: 50%;
+    height: 50%;
+  }
+  75% {
+    opacity: 0.25;
+    width: 25%;
+    height: 25%;
+  }
+  100% {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+  }
+}
+
+@keyframes move {
+  10% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform: rotate(80deg);
+  }
+  75% {
+    transform: rotate(130deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes back {
+  0% {
+    transform: rotate(180deg);
+  }
+  25% {
+    transform: rotate(130deg);
+  }
+  50% {
+    transform: rotate(80deg);
+  }
+  75% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .category .choose {

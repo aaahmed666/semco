@@ -129,8 +129,8 @@
 }
 
 .user .create input:focus {
-  border-color: var(--main-color);
-  caret-color: var(--main-color);
+  border-color: var(--primary-color);
+  caret-color: var(--primary-color);
 }
 
 .user .create form a {
@@ -368,8 +368,8 @@ html[dir="ltr"] .account a {
 }
 
 .account input:focus {
-  border-color: var(--main-color);
-  caret-color: var(--main-color);
+  border-color: var(--primary-color);
+  caret-color: var(--primary-color);
 }
 
 html[dir="rtl"]
@@ -434,16 +434,9 @@ html[dir="rtl"]
   align-items: center;
   width: 15px;
   height: 15px;
-  background-color: #fff;
-  box-shadow: inset 0 1px 4px rgba(1, 2, 2, 0.5);
-}
-
-html[dir="rtl"] .account .radio-item-1 span {
-  margin-left: 10px;
-}
-
-html[dir="ltr"] .account .radio-item-1 span {
-  margin-right: 10px;
+  background-color: #f2f2f2;
+  margin-inline-end: 10px;
+  border: 1px solid #e5e5e5;
 }
 
 .account .radio-item-1 span i {
@@ -554,7 +547,9 @@ html[dir="ltr"] .account .radio-item-1 span {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid #9ecb3b;
+  background-color: #e6f4c6;
+  border-top: 1px solid #9ecb3b;
+  border-bottom: 1px solid #9ecb3b;
 }
 
 .logged .check {
@@ -609,9 +604,9 @@ html[dir="ltr"] .account .radio-item-1 span {
   cursor: pointer;
 }
 
-.welcome .icon.close {
+/* .welcome .icon.close {
   background-color: #f5f7f7;
-}
+} */
 
 .welcome .icon h4 {
   font-size: 14px;
@@ -633,14 +628,14 @@ html[dir="ltr"] .account .radio-item-1 span {
   padding: 20px 0;
   background-color: #fafcfc;
   width: 100%;
-  animation: slidedwon 0.5s forwards ease-in-out;
-  transition: all 0.5s ease-in-out;
+  /* animation: slidedwon 0.5s forwards ease-in-out; */
+  /* transition: all 0.5s ease-in-out; */
 }
 
-.welcome .link.close {
+/* .welcome .link.close {
   display: none;
   animation: slideup 0.5s forwards ease-in-out;
-}
+} */
 
 @keyframes slidedwon {
   0% {
@@ -767,8 +762,8 @@ html[dir="ltr"] .account .radio-item-1 span {
 }
 
 .welcome form input:focus {
-  border-color: var(--main-color);
-  caret-color: var(--main-color);
+  border-color: var(--primary-color);
+  caret-color: var(--primary-color);
 }
 
 .welcome label {
@@ -1264,8 +1259,8 @@ html[dir="ltr"] .category .end i {
 }
 
 .category .box a {
-  width: 197px;
-  height: 184px;
+  width: auto;
+  height: auto;
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -1274,7 +1269,8 @@ html[dir="ltr"] .category .end i {
 }
 
 .category .box img {
-  height: 100%;
+  width: 197px;
+  height: 184px;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 25px;
 }
@@ -1288,6 +1284,15 @@ html[dir="ltr"] .category .end i {
   margin-bottom: 15px;
 }
 
+.category .photo span img {
+  width: auto;
+  height: auto;
+}
+
+.category .box a.add {
+  margin-bottom: 0;
+}
+
 .category h5.else {
   margin: 20px 0 10px;
   font-size: 14px;
@@ -1298,6 +1303,11 @@ html[dir="ltr"] .category .end i {
   font-size: 14px;
   color: var(--main-color);
   margin: 0 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.category .box h5:hover {
+  color: var(--primary-color);
 }
 
 .category .box p {
@@ -1371,7 +1381,7 @@ html[dir="ltr"] .category .end i {
   color: var(--main-color);
 }
 
-.cart .num h6 {
+.cart .num input {
   font-size: 16px;
   font-weight: 600;
   color: #a3a3a3;
@@ -1380,27 +1390,38 @@ html[dir="ltr"] .category .end i {
   padding-right: 15px;
   width: 80px;
   height: 40px;
+  outline: none;
+  border: 1px solid #f4f4f4;
   background-color: #f4f4f4;
 }
 
 .cart i.fa-sync-alt {
   width: 40px;
   height: 40px;
+  cursor: pointer;
   background-color: var(--primary-color);
   color: #fff;
   font-size: 14px;
   text-align: center;
   line-height: 40px;
+  transition: all 0.3s ease-in-out;
 }
 
 .cart i.fa-times {
   width: 40px;
   height: 40px;
+  cursor: pointer;
   background-color: #e45959;
   color: #fff;
   font-size: 14px;
   text-align: center;
   line-height: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cart i.fa-times:hover,
+.cart i.fa-sync-alt:hover {
+  background-color: var(--main-color);
 }
 
 .cart span {
@@ -1575,6 +1596,11 @@ html[dir="ltr"] .category .end i {
   transition: all 0.3s ease-in-out;
 }
 
+.returns input[type="date"] {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+
 .returns textarea {
   width: 555px;
   height: 250px;
@@ -1587,8 +1613,8 @@ html[dir="ltr"] .category .end i {
 
 .returns textarea:focus,
 .returns input:focus {
-  border-color: var(--main-color);
-  caret-color: var(--main-color);
+  border-color: var(--primary-color);
+  caret-color: var(--primary-color);
 }
 
 .returns .radio-item-1 {
@@ -1839,8 +1865,8 @@ html[dir="ltr"] .category .end i {
 
 .checkout textarea:focus,
 .checkout input:focus {
-  border-color: var(--main-color);
-  caret-color: var(--main-color);
+  border-color: var(--primary-color);
+  caret-color: var(--primary-color);
 }
 
 .checkout #map {
@@ -1891,7 +1917,23 @@ html[dir="ltr"] .category .end i {
   opacity: 0;
 }
 
+.checkout .radio-item-1.check span::after {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+}
+
 .checkout .radio-item-1 input:checked + span::after {
+  opacity: 1;
+}
+
+.checkout .radio-item-1 span i {
+  color: var(--main-color);
+  font-size: 10px;
+  opacity: 0;
+}
+
+.checkout .radio-item-1 input:checked + span i {
   opacity: 1;
 }
 
@@ -1991,7 +2033,7 @@ html[dir="ltr"] .category .end i {
 }
 
 .single .swiper-slide {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .single .info {
@@ -2011,6 +2053,7 @@ html[dir="ltr"] .category .end i {
 }
 
 .single .info .icon i {
+  cursor: pointer;
   width: 35px;
   height: 35px;
   text-align: center;
@@ -2018,6 +2061,13 @@ html[dir="ltr"] .category .end i {
   font-size: 15px;
   color: var(--main-color);
   border: 1px solid #f0f2f2;
+  transition: all 0.3s ease-in-out;
+}
+
+.single .info .icon i:hover {
+  background-color: var(--primary-color);
+  border: var(--primary-color);
+  color: #fff;
 }
 
 .single .info .item {
@@ -2269,6 +2319,7 @@ nav.side {
 .nav-tabs .nav-link.active {
   width: 180px;
   height: 50px;
+  line-height: 30px;
   text-align: center;
   margin-inline-end: 5px;
   font-size: 14px;
@@ -2279,9 +2330,22 @@ nav.side {
   border-color: #dee2e6 #dee2e6 #fff;
 }
 
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+
 .nav-tabs .nav-link.active {
   background-color: #fff;
   border-bottom: 0;
+}
+
+.nav-tabs .nav-link {
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-bottom: 0;
+  border-color: #dee2e6 #dee2e6 #fff;
 }
 
 .tab-content > .active {

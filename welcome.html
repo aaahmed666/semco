@@ -172,22 +172,27 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-3">
-            <h3>Mahmoud مرحباً</h3>
+            <h3>مرحباً <span>Mahmoud</span></h3>
             <div class="myaccount">
-              <div class="icon">
+              <div class="icon" data-target="#content" data-toggle="collapse">
                 <h4>حسابي</h4>
                 <i class="fas fa-minus"></i>
               </div>
-              <div class="link">
+              <div class="link collapse show" id="content">
                 <a class="active" href="#">تحرير معلومات الحساب</a>
                 <a href="#">تغيير كلمة المرور</a>
                 <a href="#">تعديل العناوين</a>
                 <a href="#">تعديل قائمة رغباتي</a>
               </div>
-              <div class="myorder">
+              <div
+                class="myorder"
+                data-target="#content2"
+                data-toggle="collapse"
+              >
                 <h4>طلباتي</h4>
                 <i class="fas fa-plus"></i>
               </div>
+              <div class="hi collapse show" id="content2">sign in</div>
               <div class="logout">
                 <h4>تسجيل خروج</h4>
               </div>
@@ -249,6 +254,7 @@
     <script src="js/jQuery.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.propper.js"></script>
     <script src="js/main.js"></script>
     <script src="js/welcome.js"></script>
   </body>

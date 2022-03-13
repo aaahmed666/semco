@@ -1,3 +1,10 @@
+$(document).ready(function () {
+  $(".collapse").collapse();
+  $("#myCollapsible").collapse({
+    toggle: false,
+  });
+});
+
 let icon = document.querySelector(".up");
 let social = document.querySelector("nav .social");
 let header = document.getElementById("side-header");
@@ -68,6 +75,20 @@ hero.onclick = function () {
   click.classList.toggle("open");
 };
 
+var acc = document.getElementsByClassName("section");
+var panel = document.querySelector(".category .radio-item");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
 var swiper = new Swiper(".new", {
   slidesPerView: 4,
   autoplay: {
@@ -117,11 +138,11 @@ var swiper = new Swiper(".follow", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     567: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     767: {

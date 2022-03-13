@@ -1,6 +1,14 @@
+$(document).ready(function () {
+  $("#myTab a").on("click", function (e) {
+    e.preventDefault();
+    $(this).tab("show");
+  });
+});
+
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   slidesPerView: 4,
+  spaceBetween: 10,
   freeMode: true,
   watchSlidesProgress: true,
 });
@@ -15,18 +23,11 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
-$(document).ready(function () {
-  $("#myTab a").on("click", function (e) {
-    e.preventDefault();
-    $(this).tab("show");
-  });
-});
+// let ore = document.querySelector(".single .ore");
+// let heroicon = document.querySelector(".single .ore i");
+// // let hide = document.querySelector(".single .let");
 
-let ore = document.querySelector(".single .ore");
-let heroicon = document.querySelector(".single .ore i");
-let hide = document.querySelector(".single .let");
-
-ore.onclick = function () {
-  heroicon.classList.toggle("fa-plus");
-  hide.classList.toggle("close");
-};
+// ore.onclick = function () {
+//   heroicon.classList.toggle("fa-plus");
+//   // hide.classList.toggle("close");
+// };

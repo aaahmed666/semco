@@ -882,6 +882,7 @@ nav p.price {
   font-size: 24px;
   color: #fff;
   margin-bottom: 25px;
+  line-height: 43px;
 }
 
 .picture .info {
@@ -1799,6 +1800,7 @@ html[dir="ltr"] .footer .last img {
 
   .picture .text p {
     font-size: 15px;
+    line-height: 30px;
   }
 
   .picture .text a {
@@ -1845,8 +1847,8 @@ html[dir="ltr"] .footer .last img {
   }
 
   .image .text h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 25px;
+    margin-bottom: 5px;
     text-align: center;
   }
 
@@ -1873,8 +1875,9 @@ html[dir="ltr"] .footer .last img {
   }
 
   .picture .text h3 {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
+    margin-bottom: 5px;
   }
 
   .lamp img {
@@ -1887,6 +1890,7 @@ html[dir="ltr"] .footer .last img {
   .picture .text p {
     font-size: 18px;
     text-align: center;
+    line-height: 30px;
   }
 
   .picture .text {

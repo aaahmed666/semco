@@ -165,6 +165,10 @@ a {
     url("../fonts/Cairo/Cairo-ExtraLight.ttf");
 }
 
+#side-header .hero i.fa-angle-down {
+  display: none;
+}
+
 @media (min-width: 1200px) {
   #side-header {
     position: sticky;
@@ -355,9 +359,6 @@ html[dir="ltr"] .upper-head .social i {
   background-color: var(--main-color);
 }
 
-#side-header .hero i.fa-angle-up {
-  display: none;
-}
 /* Start logo */
 .logo {
   padding: 30px 0 15px;
@@ -547,6 +548,10 @@ html[dir="ltr"] .upper-head .social i {
 }
 
 .logo .menu i {
+  display: none;
+}
+
+.logo .social i.fa-search {
   display: none;
 }
 
@@ -1429,11 +1434,11 @@ html[dir="ltr"] .footer .last img {
   #side-header .hero i {
     display: block;
     color: var(--main-color);
-    animation: back 0.3s forwards ease-in-out;
+    animation: dont 0.3s forwards ease-in-out;
   }
 
-  #side-header .hero i.fa-angle-up.open {
-    animation: move 0.3s forwards ease-in-out;
+  #side-header .hero i.fa-angle-down.open {
+    animation: go 0.3s forwards ease-in-out;
   }
 
   #side-header .hero {
@@ -1550,16 +1555,52 @@ html[dir="ltr"] .footer .last img {
 
   @keyframes back {
     0% {
-      transform: rotate(180deg);
+      transform: rotate(-180deg);
     }
     25% {
-      transform: rotate(130deg);
+      transform: rotate(-130deg);
     }
     50% {
-      transform: rotate(80deg);
+      transform: rotate(-80deg);
     }
     75% {
-      transform: rotate(50deg);
+      transform: rotate(-50deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes go {
+    10% {
+      transform: rotate(-30deg);
+    }
+    25% {
+      transform: rotate(-50deg);
+    }
+    50% {
+      transform: rotate(-80deg);
+    }
+    75% {
+      transform: rotate(-130deg);
+    }
+    100% {
+      transform: rotate(-180deg);
+    }
+  }
+
+  @keyframes dont {
+    0% {
+      transform: rotate(-180deg);
+    }
+    25% {
+      transform: rotate(-130deg);
+    }
+    50% {
+      transform: rotate(-80deg);
+    }
+    75% {
+      transform: rotate(-50deg);
     }
     100% {
       transform: rotate(0deg);
@@ -1689,11 +1730,6 @@ html[dir="ltr"] .footer .last img {
     transition: all 0.4s ease-in-out;
   }
 
-  .logo .social i.fa-heart,
-  .logo .social p.price {
-    display: none;
-  }
-
   #side-header .awsome {
     display: flex;
     align-items: center;
@@ -1791,6 +1827,14 @@ html[dir="ltr"] .footer .last img {
 
   html[dir="ltr"] .footer .icon i {
     margin: 0 10px;
+  }
+
+  .logo .social i.fa-search {
+    display: block;
+  }
+
+  #side-header .hero i.fa-angle-down {
+    display: block;
   }
 }
 

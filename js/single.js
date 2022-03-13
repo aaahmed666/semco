@@ -31,3 +31,13 @@ var swiper2 = new Swiper(".mySwiper2", {
 //   heroicon.classList.toggle("fa-plus");
 //   // hide.classList.toggle("close");
 // };
+
+$(document).ready(function () {
+  $("#headingOne").click(function () {
+    $("#headingOne button i").toggleClass("fa-minus fa-plus");
+  });
+
+  $("#headingTwo").click(function () {
+    $("#headingTwo button i").toggleClass("fa-plus fa-minus");
+  });
+});

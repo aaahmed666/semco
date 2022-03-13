@@ -50,7 +50,6 @@
         <div class="picture">
           <div class="menu">
             <i class="fas fa-bars"></i>
-            <i class="fas fa-search"></i>
             <div class="image">
               <a href="index.html"><img src="image/logo.png" alt="" /></a>
             </div>
@@ -64,8 +63,8 @@
               <i class="fas fa-user"></i>
               <div class="drop">
                 <ul>
-                  <li><a href="#">تسجيل دخول</a></li>
-                  <li><a href="#">تسجيل جديد</a></li>
+                  <li><a href="sign-in.html">تسجيل دخول</a></li>
+                  <li><a href="create-new-account.html">تسجيل جديد</a></li>
                 </ul>
               </div>
             </div>
@@ -74,7 +73,8 @@
               <i class="fas fa-shopping-cart"></i>
               <span>0</span>
             </div>
-            <p class="price">SAR 0</p>
+            <p class="price">SAR <span>0</span></p>
+            <i class="fas fa-search"></i>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
               <div class="hero">
                 <div class="go">
                   <li><a href="#">أسقف</a></li>
-                  <i class="fas fa-angle-up"></i>
+                  <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="down">
                   <div class="base">
@@ -135,10 +135,6 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span>0</span>
               </div>
-              <p class="price">SAR 0</p>
-            </div>
-            <div class="awsome">
-              <i class="fas fa-heart"></i>
               <p class="price">SAR 0</p>
             </div>
           </div>
@@ -229,17 +225,113 @@
             الرجاء الاختيار اذا كنت تمتلك رمز تخفيض أو نقاط مكافآت أو معاينة طرق
             الشحن المتوقعة لمنطقتك
           </p>
-          <div class="use">
-            <i class="fas fa-plus"></i>
-            <h3>استخدم قسيمة التخفيض</h3>
-          </div>
-          <div class="use">
-            <i class="fas fa-plus"></i>
-            <h3>الشحن المتوقع</h3>
-          </div>
-          <div class="use">
-            <i class="fas fa-plus"></i>
-            <h3>استخدام قوائم الهدايا</h3>
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <i class="fas fa-plus"><h3>استخدم قسيمة التخفيض</h3></i>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="collapseOne"
+                class="collapse show"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <i class="fas fa-plus"><h3>الشحن المتوقع</h3></i>
+                  </button>
+                </h5>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse show"
+                aria-labelledby="headingTwo"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link collapsed"
+                    data-toggle="collapse"
+                    data-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <i class="fas fa-plus"><h3>استخدام قوائم الهدايا</h3></i>
+                  </button>
+                </h5>
+              </div>
+              <div
+                id="collapseThree"
+                class="collapse show"
+                aria-labelledby="headingThree"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="final">
@@ -301,6 +393,8 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.propper.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>

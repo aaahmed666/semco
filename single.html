@@ -50,7 +50,6 @@
         <div class="picture">
           <div class="menu">
             <i class="fas fa-bars"></i>
-            <i class="fas fa-search"></i>
             <div class="image">
               <a href="index.html"><img src="image/logo.png" alt="" /></a>
             </div>
@@ -64,8 +63,8 @@
               <i class="fas fa-user"></i>
               <div class="drop">
                 <ul>
-                  <li><a href="#">تسجيل دخول</a></li>
-                  <li><a href="#">تسجيل جديد</a></li>
+                  <li><a href="sign-in.html">تسجيل دخول</a></li>
+                  <li><a href="create-new-account.html">تسجيل جديد</a></li>
                 </ul>
               </div>
             </div>
@@ -74,7 +73,8 @@
               <i class="fas fa-shopping-cart"></i>
               <span>0</span>
             </div>
-            <p class="price">SAR 0</p>
+            <p class="price">SAR <span>0</span></p>
+            <i class="fas fa-search"></i>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
               <div class="hero">
                 <div class="go">
                   <li><a href="#">أسقف</a></li>
-                  <i class="fas fa-angle-up"></i>
+                  <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="down">
                   <div class="base">
@@ -135,10 +135,6 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span>0</span>
               </div>
-              <p class="price">SAR 0</p>
-            </div>
-            <div class="awsome">
-              <i class="fas fa-heart"></i>
               <p class="price">SAR 0</p>
             </div>
           </div>
@@ -256,29 +252,82 @@
                   </div>
                 </div>
               </div>
-              <div class="ore" data-target="#content" data-toggle="collapse">
-                <i class="fas fa-minus"><p>اختر الخامة</p></i>
-              </div>
-              <div class="let collapse show" id="content">
-                <div class="radio-item-1">
-                  <label class="label-1">
-                    <input type="radio" name="color" checked />
-                    <span><img src="image/Group-3.png" alt="" /></span>
-                  </label>
-                  <label class="label-2">
-                    <input type="radio" name="color" />
-                    <span><img src="image/Group-2.png" alt="" /></span>
-                  </label>
-                  <label class="label-2">
-                    <input type="radio" name="color" />
-                    <span><img src="image/Group-1.png" alt="" /></span>
-                  </label>
+              <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button
+                        class="btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <i class="fas fa-minus"><p>اختر الخامة</p></i>
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div
+                    id="collapseOne"
+                    class="collapse hide"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      <div class="radio-item-1">
+                        <label class="label-1">
+                          <input type="radio" name="color" checked />
+                          <span><img src="image/Group-3.png" alt="" /></span>
+                        </label>
+                        <label class="label-2">
+                          <input type="radio" name="color" />
+                          <span><img src="image/Group-2.png" alt="" /></span>
+                        </label>
+                        <label class="label-2">
+                          <input type="radio" name="color" />
+                          <span><img src="image/Group-1.png" alt="" /></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button
+                        class="btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <i class="fas fa-plus"><p>اختر اللمبات</p></i>
+                      </button>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse show"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="ore" data-target="#content2" data-toggle="collapse">
-                <i class="fas fa-plus"><p>اختر اللمبات</p></i>
-              </div>
-              <div class="inside collapse show" id="content2">show</div>
             </div>
           </div>
         </div>
@@ -424,7 +473,7 @@
                     <img src="image/image-3.png" />
                   </div>
                   <div class="text">
-                    <h6>اسم المنتج</h6>
+                    <a href="#"><h6>اسم المنتج</h6></a>
                     <p>98SAR <del>140SAR </del></p>
                   </div>
                 </div>
@@ -435,7 +484,7 @@
                     <img src="image/image-2.png" />
                   </div>
                   <div class="text">
-                    <h6>اسم المنتج</h6>
+                    <a href="#"><h6>اسم المنتج</h6></a>
                     <p>230SAR <del>159SAR</del></p>
                   </div>
                 </div>
@@ -446,7 +495,7 @@
                     <img src="image/image-1.png" />
                   </div>
                   <div class="text">
-                    <h6>اسم المنتج</h6>
+                    <a href="#"><h6>اسم المنتج</h6></a>
                     <p>199SAR <del>159SAR</del></p>
                   </div>
                 </div>
@@ -457,7 +506,7 @@
                     <img src="image/image-5.png" />
                   </div>
                   <div class="text">
-                    <h6>اسم المنتج</h6>
+                    <a href="#"><h6>اسم المنتج</h6></a>
                     <p>399SAR</p>
                   </div>
                 </div>

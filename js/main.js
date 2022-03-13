@@ -3,6 +3,13 @@ $(document).ready(function () {
   $("#myCollapsible").collapse({
     toggle: false,
   });
+
+  $("#side-header .go").click(function () {
+    // $(".footer .gover i").toggleClass("fa-chevron-down fa-chevron-up");
+    $("#sider-header .down").slideToggle(function () {
+      if ($(this).is(":visible")) $(this).css("display", "inline-block");
+    });
+  });
 });
 
 let icon = document.querySelector(".up");
@@ -12,8 +19,7 @@ let menu = document.querySelector(".logo .menu i.fa-bars");
 let close = document.querySelector(".closeside i");
 let popup = document.querySelector(".popup");
 let lang = document.querySelector("#side-header .info");
-let price = document.querySelector("#side-header .awsome");
-let search = document.querySelector(".logo .menu i.fa-search");
+let search = document.querySelector(".logo .social i.fa-search");
 let find = document.querySelector(".logo .search");
 let hero = document.querySelector("#side-header .hero");
 let click = document.querySelector("#side-header .down");
@@ -46,7 +52,6 @@ menu.onclick = function () {
   header.classList.add("open");
   popup.classList.add("open");
   lang.classList.add("open");
-  price.classList.add("open");
   document.body.classList.add("ovh");
 };
 
@@ -54,7 +59,6 @@ close.onclick = function () {
   header.classList.remove("open");
   popup.classList.remove("open");
   lang.classList.remove("open");
-  price.classList.remove("open");
   document.body.classList.remove("ovh");
 };
 
@@ -62,7 +66,6 @@ popup.onclick = function () {
   header.classList.remove("open");
   popup.classList.remove("open");
   lang.classList.remove("open");
-  price.classList.remove("open");
   document.body.classList.remove("ovh");
 };
 
